@@ -20,7 +20,7 @@ keyset.u = {x: 0, y: 2};
 keyset.d = {x: 0, y: -2};
 
 
-// var units = document.getElementsByClassName("unit");
+var units = document.getElementsByClassName("unit");
 
 
 //-----------------units------------------------------

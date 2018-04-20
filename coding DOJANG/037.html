@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+
+    let al = [4,1,4,2,3]
+    let bl = [5,1,4,2,-1,6]
+    
+    function cal (x) {
+      let list  = []
+      let i = 1;
+      while (i+1 < x.length){
+        // console.log("i", i, "list",list)
+        list.push(Math.abs(x[i+1] - x[i]))
+        i++
+      }
+      list.sort().unshift(x[0])
+      // console.log(list)
+      return list
+   }
+
+   function match (x) {
+     let judge = 0;
+     for ( let i = 1; i < x.length; i++){
+       x[i] === i ? "" : judge++;
+      //  console.log("judge", judge)
+     }
+     return judge === 0 ? true : false
+     }
+
+
+     function jolly (x) {
+       if (x[0] !== 0) {
+         return match(cal(x))
+       } else { return "no element"}
+     }
+
+     console.log(jolly(al))
+     console.log(jolly(bl))
+
+
+
+
+
+    
+    </script>
+</body>
+</html>
